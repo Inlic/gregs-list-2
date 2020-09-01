@@ -34,15 +34,16 @@ export default class HousesController {
   createHouse() {
     event.preventDefault();
     let form = event.target
+    //Must be named after the API target or it won't POST to the api
     let rawHouse = {
       // @ts-ignore
       levels: form.levels.value,
       // @ts-ignore
-      beds: form.beds.value,
+      bedrooms: form.beds.value,
       // @ts-ignore
-      baths: form.baths.value,
+      bathrooms: form.baths.value,
       // @ts-ignore
-      yearbuilt: form.yearbuilt.value,
+      year: form.yearbuilt.value,
       // @ts-ignore
       price: parseInt(form.houseprice.value),
       // @ts-ignore

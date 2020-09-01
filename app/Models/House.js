@@ -7,7 +7,7 @@ export default class House {
     this.yearbuilt = year
     this.price = price
     this.levels = levels
-    this.imgUrl = imgUrl
+    this.imgUrl = imgUrl || ""
     this.description = description || "no description"
   }
 

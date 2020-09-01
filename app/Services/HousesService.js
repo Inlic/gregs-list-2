@@ -32,6 +32,7 @@ class HousesService {
 
   async createHouse(rawHouse) {
     // NOTE post request takes the url and the data to create
+    console.log(rawHouse)
     let res = await api.post('houses', rawHouse)
     // this.getHouses();
     let house = new House(res.data.data)
