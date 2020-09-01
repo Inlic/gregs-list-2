@@ -11,48 +11,40 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">gregslist2</span>
-            </a>
-        </nav>
-    </header>
-    <main class="container-fluid">
-        <div class="row my-3">
-            <div class="col" id="form">
-                <form onsubmit="app.carsController.createCar()" class="form-inline">
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="make">Make</label>
-                        <input type="text" name="make" id="make" class="form-control" placeholder="Make...">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="model">Model</label>
-                        <input type="text" name="model" id="model" class="form-control" placeholder="Model...">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="year">Year</label>
-                        <input type="number" name="year" id="year" class="form-control" placeholder="Year..." min="1900"
-                            max="2021">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="price">Price</label>
-                        <input type="number" name="price" id="price" class="form-control" placeholder="Price...">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="description">Description</label>
-                        <input type="text" name="description" id="description" class="form-control"
-                            placeholder="Description...">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="img">Image Url</label>
-                        <input type="url" name="img" id="img" class="form-control" placeholder="Image Url...">
-                    </div>
-                    <button type="submit" class="btn btn-outline-success">Add Car</button>
-                </form>
+        <nav class="row bg-dark">
+            <div class="nav nav-tabs col-4" id="nav-tab" role="tablist">
+              <a class="nav-link active mx-1 text-secondary bg-warning" id="nav-cars-tab" data-toggle="tab" href="#cars-tab" role="tab" aria-controls="nav-home" aria-selected="true">Cars</a>
+              <a class="nav-link mx-1 text-secondary bg-warning" id="nav-houses-tab" data-toggle="tab" href="#houses-tab" role="tab" aria-controls="nav-profile" aria-selected="false">Houses</a>
+              <a class="nav-link mx-1 text-secondary bg-warning" id="nav-jobs-tab" data-toggle="tab" href="#jobs-tab" role="tab" aria-controls="nav-contact" aria-selected="false">Jobs</a>
             </div>
-        </div>
-        <div class="row" id="data">
+            <div class = "col-4 text-center text-light text-shadow">
+                <h1>Gregslist</h1>
+            </div>
+          </nav>
+    </header>
+    <main class="container" id="main">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active row" id="cars-tab" role="tabpanel" aria-labelledby="nav-home-tab">
+                
+            <div id="cars" class="row">
+
+            </div>
+
+            </div>
+            <div class="tab-pane fade row" id="houses-tab" role="tabpanel" aria-labelledby="nav-profile-tab">
+                
+            <div id ="houses" class="row">
+
+            </div>
+
+            </div>
+            <div class="tab-pane fade row" id="jobs-tab" role="tabpanel" aria-labelledby="nav-contact-tab">
+                
+            <div id ="jobs" class="row">
+
+            </div>
+
+            </div>
         </div>
     </main>
     <footer class="container-fluid bg-dark text-light">

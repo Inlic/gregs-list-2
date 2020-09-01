@@ -1,12 +1,13 @@
 import { ProxyState } from "../AppState.js";
 import carsService from "../Services/CarsService.js";
+import Car from "../Models/Car.js";
 
 // private
 function _drawCars() {
   let cars = ProxyState.cars
-  let templates = ''
+  let templates = new Car({_id:"",make:"",model:"",year:1,price:1,imgUrl:"",description:""}).formTemplate
   cars.forEach(c => templates += c.Template)
-  document.getElementById('data').innerHTML = templates
+  document.getElementById('cars').innerHTML = templates
 }
 
 
@@ -41,11 +42,11 @@ export default class CarsController {
       // @ts-ignore
       year: form.year.value,
       // @ts-ignore
-      price: parseInt(form.price.value),
+      price: parseInt(form.carprice.value),
       // @ts-ignore
-      description: form.description.value,
+      description: form.cardescription.value,
       // @ts-ignore
-      imgUrl: form.img.value
+      imgUrl: form.carimg.value
     }
     try {
       carsService.createCar(rawCar)
