@@ -6,7 +6,7 @@ import Job from "../Models/Job.js";
 function _drawJobs() {
   let jobs = ProxyState.jobs
   let templates = new Job({ _id: "", company: "", jobTitle: "", rate: "", hours: "", description: "" }).formTemplate
-  jobs.forEach(h => templates += h.Template)
+  jobs.forEach(j => templates += j.Template)
   document.getElementById('jobs').innerHTML = templates
 }
 

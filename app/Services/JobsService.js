@@ -20,7 +20,6 @@ class JobsService {
   
   async createJob(rawJob) {
     // NOTE post request takes the url and the data to create
-    console.log(rawJob)
     let res = await api.post('jobs', rawJob)
     // this.getJobs();
     let job = new Job(res.data.data)
