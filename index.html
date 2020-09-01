@@ -14,7 +14,7 @@
         <nav class="row bg-dark">
             <div class="nav nav-tabs col-4" id="nav-tab" role="tablist">
               <a class="nav-link active mx-1 text-secondary bg-warning" id="nav-cars-tab" data-toggle="tab" href="#cars-tab" role="tab" aria-controls="nav-home" aria-selected="true">Cars</a>
-              <a class="nav-link mx-1 text-secondary bg-warning" id="nav-houses-tab" data-toggle="tab" href="#houses-tab" role="tab" aria-controls="nav-profile" aria-selected="false">Houses</a>
+              <a class="nav-link mx-1 text-secondary bg-warning" id="nav-houses-tab" data-toggle="tab" href="#houses-tab" role="tab" aria-controls="nav-profile" aria-selected="false" onclick="app.housesController.getHouses()">Houses</a>
               <a class="nav-link mx-1 text-secondary bg-warning" id="nav-jobs-tab" data-toggle="tab" href="#jobs-tab" role="tab" aria-controls="nav-contact" aria-selected="false">Jobs</a>
             </div>
             <div class = "col-4 text-center text-light text-shadow">
@@ -33,14 +33,14 @@
             </div>
             <div class="tab-pane fade row" id="houses-tab" role="tabpanel" aria-labelledby="nav-profile-tab">
                 
-            <div id ="houses" class="row">
+            <div id="houses" class="row">
 
             </div>
 
             </div>
             <div class="tab-pane fade row" id="jobs-tab" role="tabpanel" aria-labelledby="nav-contact-tab">
                 
-            <div id ="jobs" class="row">
+            <div id="jobs" class="row">
 
             </div>
 
@@ -55,7 +55,9 @@
         </div>
     </footer>
 
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
         integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
         crossorigin="anonymous"></script>
